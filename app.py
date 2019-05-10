@@ -8,6 +8,18 @@ class Filme:
     def dar_like(self):
         self.__likes += 1
 
+    @property
+    def likes(self):
+        return self.__likes
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @nome.setter
+    def nome(self, novo_nome):
+        self.__nome = novo_nome.title()
+
 
 class Serie:
     def __init__(self, nome, ano, temporadas):
@@ -18,6 +30,18 @@ class Serie:
 
     def dar_like(self):
         self.__likes += 1
+
+    @property
+    def likes(self):
+        return self.__likes
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @nome.setter
+    def nome(self, novo_nome):
+        self.__nome = novo_nome.title()
 
 
 vingadores = Filme("vingadores - ultimato", 2018, 160)
